@@ -18,7 +18,7 @@ export default function Home() {
         <p className="text-blue-200 text-lg">Sales and Repairs of Laptops, PC, Printers, Premium Software Engineering and Hardware Infrastructure</p>
       </header>      
       <section className="max-w-5xl mx-auto mb-20">
-        <h2 className="text-2xl mb-6 font-semibold">Cheap Quick Sales, Limited stocks (Slide to the right to view more)</h2>
+        <h2 className="text-2xl mb-6 font-semibold">Cheap Quick Sales, Limited stocks</h2><h4><i>Slide to the right to view more</i></h4>
         <ProductSlider />
       </section>
 
