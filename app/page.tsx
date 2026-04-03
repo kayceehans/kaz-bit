@@ -5,6 +5,8 @@ import Services from '@/components/Services';
 import CaseStudy from '@/components/CaseStudy';
 import Testimonials from '@/components/Testimonials';
 import CEOContact from '@/components/CEOContact';
+import Footer from '@/components/Footer';
+import ProductSlider from '@/components/productSlider';
 
 export default function Home() {
   return (
@@ -13,14 +15,17 @@ export default function Home() {
         <h1 className="text-5xl font-extrabold mb-4 text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-300">
           Kaz-Bit I-T Solutions
         </h1>
-        <p className="text-blue-200 text-lg">Premium Software Engineering & Hardware Infrastructure</p>
-      </header>
+        <p className="text-blue-200 text-lg">Sales and Repairs of Laptops, PC, Printers, Premium Software Engineering and Hardware Infrastructure</p>
+      </header>      
+      <section className="max-w-5xl mx-auto mb-20">
+        <h2 className="text-2xl mb-6 font-semibold">Cheap Quick Sales, Limited stocks</h2>
+        <ProductSlider />
+      </section>
 
       <section className="max-w-5xl mx-auto mb-20">
         <h2 className="text-2xl mb-6 font-semibold">Business Performance Summary</h2>
         <Dashboard />
       </section>
-
      <section className="max-w-5xl mx-auto mb-20">
         <h2 className="text-2xl mb-6 font-semibold">About Us</h2>
         <About />
@@ -49,6 +54,11 @@ export default function Home() {
       <section className="max-w-2xl mx-auto">
         <h2 className="text-center text-3xl font-bold mb-8">CEO</h2>
         <CEOContact />
+      </section>
+
+      <section className="max-w-2xl mx-auto">
+        {/* <h2 className="text-center text-3xl font-bold mb-8">CEO</h2> */}
+        <Footer />
       </section>
 
     </main>
