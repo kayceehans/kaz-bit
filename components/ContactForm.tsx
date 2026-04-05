@@ -3,6 +3,7 @@
 import { useRef } from 'react';
 import emailjs from '@emailjs/browser';
 
+
 export default function ContactForm() {
   const form = useRef<HTMLFormElement>(null);
 
@@ -11,8 +12,16 @@ export default function ContactForm() {
     const TEMPLATE_ID = process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID!
     const PUBLIC_KEY = process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY!
     e.preventDefault();
+
     emailjs.sendForm(SERVICE_ID, TEMPLATE_ID, form.current!, PUBLIC_KEY)
-      .then(() => alert('Message Sent!'), (error) => console.log(error.text));
+      .then(() => {        
+        alert('Message');
+        form.current?.reset();
+  })
+      .catch((error)=>{
+         console.log(error.text);         
+         alert('Failed to send message. Please try again later.');
+      });      
   };
 
   return (
